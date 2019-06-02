@@ -1,0 +1,141 @@
+.multiselect-wrapper {
+  width: 400px;
+  height: 100%;
+  &.is-active {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .05);
+  }
+}
+
+.multiselect {
+  &__control {
+    border: 1px solid #E0E0E0;
+    padding: 6px 25px 0px 6px;
+    background-color: #fff;
+    min-height: 45px;
+    position: relative;
+  }
+  &__remove-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  &__arrow-icon {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transform: translateY(-50%);
+    color: #8C8C8C;
+    font-size: 14px;
+  }
+  &__search-area {
+    line-height: 45px;
+    padding: 0 30px 0 15px;
+    position: relative;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+  &__search-input {
+    background: 0px center;
+    border: 0px;
+    font-size: inherit;
+    opacity: 1;
+    outline: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  &__search-icon {
+    color: #8C8C8C;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  &__result-area {
+    border: 1px solid #E0E0E0;
+    border-top: none;
+    background-color: #fff;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.multiselect-choices {
+  display: inline-block;
+  &__item {
+    display: inline-block;
+    border-radius: 2px;
+    background-color: #DAF2FC;
+    color: #06AAE0;
+    margin-right: 5px;
+    padding: 8px 9px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #cef0ff;
+    line-height: 1;
+  }
+}
+
+.multiselect-results {
+  &__item {
+    line-height: 45px;
+    &:hover {
+      background-color: #f8f8f8;
+    }
+    & + & {
+      border-top: 1px solid #E0E0E0;
+    }
+    &.is-active {
+      background-color: #F2FAFD;
+      border: 1px solid #C7E2EC;
+      margin: 0 -1px;
+      &:first-child {
+        border-top: none;
+      }
+      &:last-child {
+        margin-bottom: -1px;
+      }
+    }
+    &.is-active + & {
+      border-top: none;
+    }
+    &.is-highlighted {
+      background-color: #f8f8f8;
+    }
+
+  }
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox-label {
+  position: relative;
+  padding: 0 0 0 45px;
+  display: block;
+  cursor: pointer;
+}
+
+.custom-checkbox-label::before {
+  font-family: FontAwesome;
+  width: 16px;
+  height: 16px;
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label::before {
+  content: "\f00c";
+  background-color: #00A9DF;
+  color: #fff;
+  border-color: #018BB9;
+}
+
