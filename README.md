@@ -1,6 +1,6 @@
 A React component assignment: Multiselect dropdown with checkbox 
 
-
+![React multiselect dropdown preview](/react-multiselect-dropdown-preview.png)
 
 ## Installation
 
