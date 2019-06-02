@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>Assignment:	Multi-select	Dropdown	React	Component</h1>
+        <h1>React Assignment:	Multi-select Dropdown Component</h1>
         <div className="container">
           <MultiSelect 
             options={options}

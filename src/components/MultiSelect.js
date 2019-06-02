@@ -154,6 +154,7 @@ class MultiSelect extends React.Component {
       <div 
         className="multiselect__control"
         onClick={this.handleDropdownClick}>
+        <span className={`multiselect__placeholder ${this.state.selectedOptions.length ? 'is-hidden' : ''}`}>Choose department...</span>
         <span className={`multiselect__arrow-icon fa ${this.state.dropdownActive ? 'fa-chevron-up' : 'fa-chevron-down'}`}></span>
         <ul className="multiselect-choices">
           {

@@ -27,6 +27,13 @@
     color: #8C8C8C;
     font-size: 14px;
   }
+  &__placeholder {
+    color: #666;
+    line-height: 34px;
+    &.is-hidden {
+      display: none;
+    }
+  }
   &__search-area {
     line-height: 45px;
     padding: 0 30px 0 15px;
