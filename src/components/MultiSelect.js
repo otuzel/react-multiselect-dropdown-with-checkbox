@@ -8,7 +8,7 @@ class MultiSelect extends React.Component {
     filteredOptions: this.props.options || [],
     selectedOptions: this.props.defaultValues ? this.props.defaultValues : [],
     dropdownActive: false,
-    cursor: 0,
+    cursor: 0
   }
   multiSelectRef = React.createRef();
   textInputRef = React.createRef();
@@ -21,6 +21,7 @@ class MultiSelect extends React.Component {
       }
     }, () => this.resetDropdown());
   }
+  // Resets dropdown to initial state
   resetDropdown = () => {
     if (this.state.dropdownActive) {
       this.textInputRef.current.value = '';
@@ -46,10 +47,11 @@ class MultiSelect extends React.Component {
       }
     });
   }
-  // Navigation with arrow keys
+  // Handle arrow keys and enter key
   handleSearchKeyDown = (e) => {
     const { cursor } = this.state;
     const key = e.which || e.keyCode || 0;
+    // Up Arrow
     if (key === 38 && cursor > 0) {
       this.setState((state) => {
         return {
@@ -57,6 +59,7 @@ class MultiSelect extends React.Component {
         }
       });
     }
+    // Down arrow
     if (key === 40 && cursor < this.state.filteredOptions.length) {
       this.setState((state) => {
         return {
