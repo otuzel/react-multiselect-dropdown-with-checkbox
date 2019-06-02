@@ -1,5 +1,6 @@
 React component assignment: Multiselect dropdown with checkbox 
-[See the working version here:](https://react-multiselect-dropdown-with-checkbox.stackblitz.io/)
+
+See the working version [here](https://react-multiselect-dropdown-with-checkbox.stackblitz.io/)
 
 ![React multiselect dropdown preview](/react-multiselect-dropdown-preview.png)
 
