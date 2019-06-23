@@ -3,7 +3,6 @@ import './MultiSelect.scss';
 
 class MultiSelect extends React.Component {
   state = {
-    ...this.props,
     options: this.props.options || [],
     filteredOptions: this.props.options || [],
     selectedOptions: this.props.defaultValues ? this.props.defaultValues : [],
