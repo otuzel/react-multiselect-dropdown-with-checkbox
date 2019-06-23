@@ -69,6 +69,9 @@ class MultiSelect extends React.Component {
     // Select by enter
     if (key === 13) {
       const highlightedItem = this.state.filteredOptions[this.state.cursor];
+      if (!highlightedItem) {
+        return;
+      }
       if (!this.state.selectedOptions.find(opt => opt.value === highlightedItem.value)) {
         this.setState((state) => {
           return {
